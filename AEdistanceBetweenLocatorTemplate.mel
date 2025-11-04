@@ -1,0 +1,19 @@
+global proc AEdistanceBetweenLocatorTemplate(string $nodeName)
+{
+    editorTemplate -beginScrollLayout;
+    
+        editorTemplate -beginLayout "Distance Between Attributes" -collapse 0;
+            editorTemplate -addControl "point1";
+            editorTemplate -addControl "point2";
+            editorTemplate -addControl "minDistance";
+            editorTemplate -addControl "maxDistance";
+            
+            AEaddRampControl($nodeName + ".colorRamp");
+        
+        editorTemplate -endLayout;
+    
+    editorTemplate -addExtraControls;
+    editorTemplate -endScrollLayout;
+}
+
+// refreshEditorTemplates;
